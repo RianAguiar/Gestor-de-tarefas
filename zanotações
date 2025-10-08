@@ -1,0 +1,4 @@
+'''Alterações em arquivos estáticos (CSS, JS) ou templates (.html):
+ O Ctrl + F5 (ou Cmd + Shift + R no Mac) resolve 99% das vezes, forçando o navegador a baixar a versão mais nova.'''
+
+''' http://127.0.0.1:8000/tarefas/adicionar/ '''

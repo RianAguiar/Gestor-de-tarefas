@@ -5,16 +5,34 @@
 }
 
 body{
-    display: flex;
+    display:flex;
     justify-content: center;
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(0, 0, 0, 0.05);
     color: #303030;
 
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+a{
+    color: #303030;
+    text-decoration: none;
 }
 
 .wrapper{
     margin-top: 50px;
     display: block;
+    background-color: white;
+    padding: 100px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 20px -12px #000;
 }
 
 .wrapper h1{
@@ -66,9 +84,7 @@ td{
     border-width: 1px;
 }
 
-.add:hover{
-    background-color: white;
-}
+
 
 .upt{
     color: #303030;
@@ -77,9 +93,6 @@ td{
     border-radius: 4px;
 }
 
-.upt:hover{
-    background-color: white;
-}
 
 .rmv{
     border: none;
@@ -88,9 +101,6 @@ td{
     border-radius: 4px;
 }
 
-.rmv:hover{
-    background-color: white;
-}
 
 .button-wrapper{
     margin-top: 2px;
