@@ -8,9 +8,11 @@
     <link rel="icon" href="{% static "img/logo.png" %}">
 </head>
 <body>
-
     <div class="wrapper">
-        <h1>🐸Adicione suas tarefas nesta página🐸</h1>
+        <div class="wrapper2">
+            <button><a href="{% url "tarefas:home" %}">Voltar</a></button>
+            <h1>🐸Adicione suas tarefas nesta página🐸</h1>
+        </div>
         <form action="" method="post">
             {% csrf_token %}
             {{form}} 
