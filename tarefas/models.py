@@ -1,7 +1,6 @@
 from django.db import models
 
-# Create your models here.
-class tarefaModels(models.model):
+class tarefaModels(models.Model):
     status = models.BooleanField(default=False)
     nome = models.CharField(max_length=67)
     descricao = models.CharField(null=True, blank=True, max_length=69)

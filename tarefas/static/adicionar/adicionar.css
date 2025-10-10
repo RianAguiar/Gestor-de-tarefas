@@ -1,0 +1,109 @@
+*{
+    font-family: "Monaspace Neon", ui-monospace, SFMono-Regular,
+    SF Mono, Menlo, Consolas, Liberation Mono, monospace  ;
+    transition: 0.5s;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #303030;
+
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+a{
+    color: #303030;
+    text-decoration: none;
+}
+
+.wrapper{
+    margin-top: 50px;
+    display: block;
+    background-color: white;
+    padding: 100px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 20px -12px #000;
+}
+
+.wrapper h1{
+    color: #303030;
+    display: flex;
+    align-items: center;
+}
+
+
+.wrapper2{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+table{
+    width: 100%;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+tr{
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+th{
+    padding: 5px;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+td{
+    text-align: center;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.add{
+    color: #303030;
+    margin: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+
+
+.upt{
+    color: #303030;
+    margin: 1px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.rmv{
+    border: none;
+    color: #303030;
+    margin: 1px;
+    border-radius: 4px;
+}
+
+
+.button-wrapper{
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .forms import tarefaForm
 
 def tarefas(request):
-    return render(request,'home/index.html')
+    return render(request,'index.html')
+
+
 
 def tarefas_adicionar(request):
-    return HttpResponse('adicionar')
+    contexto={
+    'form':tarefaForm  
+    } 
+    return render(request,'adicionar.html')
