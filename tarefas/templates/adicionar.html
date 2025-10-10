@@ -8,8 +8,14 @@
     <link rel="icon" href="{% static "img/logo.png" %}">
 </head>
 <body>
-    <h1>🐸Adicione suas tarefas nesta página🐸</h1>
 
-    <form action="" method="post"> {{form}} </form>
+    <div class="wrapper">
+        <h1>🐸Adicione suas tarefas nesta página🐸</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}} 
+            <button type="submit" value="Enviar">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>

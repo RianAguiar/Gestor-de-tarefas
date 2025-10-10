@@ -17,31 +17,26 @@
         </h1>
     </div>
 
-
     <table border="1" style="padding: 1px;">
-    <tr>
-        <th>Status</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Data de criação</th>
-        <th>Manipular Tarefas</th>
-    </tr>
-    <tr>
-        <td>abc</td>
-        <td>abc</td>
-        <td>abc</td>
-        <td>abc</td>
-        <td><button class="upt tr">Editar tarefa</button><button class="rmv tr">Remover tarefa</button></td>
-    </tr>
-    <tr>
-        <td>abc</td>
-        <td>abc</td>
-        <td>abc</td>
-        <td>abc</td>
-        <td><button class="upt tr">Editar tarefa</button><button class="rmv tr">Remover tarefa</button></td>
-    </tr>
-    </table>
+        <thead>
+            <th>Status</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Data de criação</th>
+            <th>Manipular Tarefas</th>
+        </thead>
 
+        <tbody>
+            {% for tarefa in tarefas %}
+                <tr>
+                    <td>{{tarefa.status}}</td>
+                    <td>{{tarefa.nome}}</td>
+                    <td>{{tarefa.descricao}}</td>
+                    <td>{{tarefa.dataDeCricao}}</td>
+                </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
     <div class="button-wrapper">
         <button class="add tr"><a href="{% url "tarefas:adicionar" %}">Adicionar tarefa</a></button>
     </div>
