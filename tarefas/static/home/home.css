@@ -15,6 +15,12 @@ body{
 button{
     cursor: pointer;
     background-color: white;
+    color: #303030;
+    margin: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
 }
 
 button:hover{
