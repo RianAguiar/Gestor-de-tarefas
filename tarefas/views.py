@@ -18,3 +18,6 @@ def tarefas_adicionar(request:HttpRequest):
             return redirect('tarefas:home')
     context={'form' : tarefaForm } 
     return render(request,'adicionar.html', context)
+
+def tarefas_remover():
+    return redirect('tarefas:home')
