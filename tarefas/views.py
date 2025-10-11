@@ -1,4 +1,4 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect, get_object_or_404
 from .models import tarefaModels
 from .forms import tarefaForm
 from django.http import HttpRequest
@@ -19,5 +19,7 @@ def tarefas_adicionar(request:HttpRequest):
     context={'form' : tarefaForm } 
     return render(request,'adicionar.html', context)
 
-def tarefas_remover():
+def tarefas_remover(request,tarefaModels):
+    item = get_object_or_404(tarefaModels, pk=item_id)
+    item.delete()
     return redirect('tarefas:home')
