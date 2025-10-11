@@ -19,7 +19,7 @@ def tarefas_adicionar(request:HttpRequest):
     context={'form' : tarefaForm } 
     return render(request,'adicionar.html', context)
 
-def tarefas_remover(request,tarefaModels):
-    item = get_object_or_404(tarefaModels, pk=item_id)
+def tarefas_remover(request:HttpRequest,id):
+    item = get_object_or_404(tarefaModels, id=id)
     item.delete()
     return redirect('tarefas:home')
