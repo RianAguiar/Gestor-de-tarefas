@@ -1,0 +1,86 @@
+*{
+    font-family: "Monaspace Neon", ui-monospace, SFMono-Regular,
+    SF Mono, Menlo, Consolas, Liberation Mono, monospace  ;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #303030;
+
+}
+
+a{
+    color: #303030;
+    text-decoration: none;
+}
+
+form{
+    color: gray;
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+    color: #303030;
+    margin: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.wrapper{
+    margin-top: 50px;
+    display: block;
+    background-color: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 20px -12px #000;
+}
+
+.wrapper h1{
+    color: #303030;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper2{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+
+table{
+    width: 100%;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+tr{
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+th{
+    padding: 5px;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+td{
+    text-align: center;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 5px;
+}
