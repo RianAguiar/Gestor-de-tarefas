@@ -1,0 +1,33 @@
+*{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.wrapper2{
+    margin-bottom: 14px;
+}
+
+input{
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(211, 211, 211);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 8px;
+}
+
+textarea{
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(211, 211, 211);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+button{
+    margin: 14px;
+}
+input#id_status{
+    background-color: rgba(255, 255, 255, 0);
+}

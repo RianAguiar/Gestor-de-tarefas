@@ -6,13 +6,11 @@
 body{
     display:flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #303030;
-
+    background-color: #6da150;
 }
 
 a{
-    color: #303030;
+    color: gray;
     text-decoration: none;
 }
 
@@ -21,14 +19,16 @@ form{
 }
 
 button{
+    color: gray;
     cursor: pointer;
-    background-color: white;
-    color: #303030;
+    background-color: rgba(255, 255, 255, 0);
     margin: 1px;
-    border-color: gray;
     border-style: solid;
+    border-color: rgb(211, 211, 211);
     border-radius: 4px;
     border-width: 1px;
+    box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #ffffff;
+    transition: 0.5s;
 }
 
 button:hover{
@@ -38,49 +38,67 @@ button:hover{
 .wrapper{
     margin-top: 50px;
     display: block;
-    background-color: white;
+    background-color: rgb(236, 236, 236);
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0px 2px 20px -12px #000;
 }
 
 .wrapper h1{
-    color: #303030;
+    color: #6da150;
     display: flex;
     align-items: center;
 }
 
 .wrapper2{
+    height: 60px;
     display: flex;
     align-items: center;
     justify-self: center;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(211, 211, 211);
+    border-width: 0.5px;
+    /*sombra*/
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    
+
 }
 
 
 table{
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    margin-top: 12px;
     width: 100%;
-    border-color: gray;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: solid;
-}
-
-tr{
-    border-color: gray;
-    border-radius: 5px;
-    border-style: solid;
+    border-color: rgb(211, 211, 211);
 }
 
 th{
     padding: 5px;
-    border-color: gray;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: solid;
+    border-color: rgb(211, 211, 211);
+    box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #ffffff;
+    border-style: solid;
+    color: gray;
 }
 
 td{
     text-align: center;
-    border-color: gray;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: solid;
+    border-color: rgb(211, 211, 211);
     padding: 5px;
+    box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #ffffff;
+    color: gray;
+}
+
+.nmf{
+  background-image: linear-gradient(to bottom right,#00000040 5%, #ececec 60%);
+  backdrop-filter: blur(20px);
+  box-shadow: 7px 7px 15px #00000080, -1px -1px 15px #ffffff72;
+
 }
