@@ -29,7 +29,13 @@
         <tbody>
             {% for tarefa in tarefas %}
                 <tr>
-                    <td>{% if tarefa.status %}Feito{% else %}Não Feito{% endif %}</td>
+                    <td>
+                        {% if tarefa.status %}
+                            <img src="{% static "img/check.png" %} %}" alt="">
+                        {% else %}
+                            <img src="{% static "img/x.png" %} %}" alt="">
+                        {% endif %}
+                    </td>
                     <td>{{tarefa.nome}}</td>
                     <td>{{tarefa.descricao}}</td>
                     <td>{{tarefa.dataDeCricao}}</td>
