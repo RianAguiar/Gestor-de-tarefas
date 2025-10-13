@@ -1,0 +1,24 @@
+{% load static %}    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tarefas</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'adicionar/adicionar.css' %}">
+    <link rel="icon" href="{% static "img/logo.png" %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper2">
+            <button><a href="{% url "tarefas:home" %}">Voltar</a></button>
+            <h1>Adicione suas tarefas nesta página</h1>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}} 
+            <button type="submit" value="Enviar">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

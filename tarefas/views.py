@@ -23,3 +23,14 @@ def tarefas_remover(request:HttpRequest,id):
     item = get_object_or_404(tarefaModels, id=id)
     item.delete()
     return redirect('tarefas:home')
+
+def tarefas_editar(request:HttpRequest,id):
+    item = get_object_or_404(tarefaModels, id=id)
+    if request.method == 'POST':
+        formulario = tarefaForm(request.POST, instance=item)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('tarefas:home')
+    formulario = tarefaForm(instance=item)
+    context={'form' : formulario }
+    return render(request,'editar.html', context)

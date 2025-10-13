@@ -29,13 +29,13 @@
         <tbody>
             {% for tarefa in tarefas %}
                 <tr>
-                    <td>{{tarefa.status}}</td>
+                    <td>{% if tarefa.status %}Feito{% else %}Não Feito{% endif %}</td>
                     <td>{{tarefa.nome}}</td>
                     <td>{{tarefa.descricao}}</td>
                     <td>{{tarefa.dataDeCricao}}</td>
                     <td>
                         <button>
-                            <a href="">Editar</a>
+                            <a href="{% url "tarefas:editar" tarefa.id %}">Editar</a>
                         </button>
                         
                         <button>
