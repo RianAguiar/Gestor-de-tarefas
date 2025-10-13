@@ -81,7 +81,7 @@ th{
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(211, 211, 211);
-    box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     border-style: solid;
     color: gray;
 }
