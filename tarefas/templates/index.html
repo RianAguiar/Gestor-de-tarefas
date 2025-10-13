@@ -13,7 +13,7 @@
 <div class="wrapper">
     <div class="wrapper2">
         <h1 style="color: #6da150;">
-            🐸 Gestor de Tarefas 🐸
+            🐸Gestor de Tarefas
         </h1>
     </div>
 
@@ -31,9 +31,9 @@
                 <tr>
                     <td>
                         {% if tarefa.status %}
-                            <img src="{% static "img/check.png" %} %}" alt="">
+                            <img class="icon" src="{% static "img/check.png" %}" alt="" width="20px">
                         {% else %}
-                            <img src="{% static "img/x.png" %} %}" alt="">
+                            <img class="icon" src="{% static "img/x.png" %}" alt="" width="20px">
                         {% endif %}
                     </td>
                     <td>{{tarefa.nome}}</td>
