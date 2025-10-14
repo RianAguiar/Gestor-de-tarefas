@@ -3,11 +3,11 @@ from .models import tarefaModels
 from .forms import tarefaForm
 from django.http import HttpRequest
 
-def tarefas(request):
+def tarefas_home(request):
     context={
         'tarefas':tarefaModels.objects.all()
     }
-    return render(request,'index.html',context)
+    return render(request,'home.html',context)
 
 
 def tarefas_adicionar(request:HttpRequest):
