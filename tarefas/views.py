@@ -3,6 +3,9 @@ from .models import tarefaModels
 from .forms import tarefaForm
 from django.http import HttpRequest
 
+def tarefas_index(request):
+    return render(request,'index.html')
+
 def tarefas_home(request):
     context={
         'tarefas':tarefaModels.objects.all()

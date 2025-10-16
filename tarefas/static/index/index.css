@@ -1,0 +1,83 @@
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+h1{
+text-align: center;
+}
+
+input{
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(211, 211, 211);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 8px 0px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button {
+width: 100%;
+padding: 10px;
+box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+background-color: #6da150;
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover{
+    background-color: #50783b;
+}
+
+form{
+    display: block;
+    width: 100%;
+}
+
+.link {
+display: block;
+text-align: center;
+margin-top: 10px;
+font-size: 14px;
+color: #6da150;
+text-decoration: none;
+}
+.link:hover {
+text-decoration: underline;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 350px;
+    margin-top: 50px;
+    background-color: rgb(236, 236, 236);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 20px -12px #000;
+}
+
+.cadastro{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+p{
+    padding-top: 10px;
+    padding-right: 5px;
+}
