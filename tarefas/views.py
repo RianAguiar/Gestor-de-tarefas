@@ -50,7 +50,7 @@ def tarefas_index(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('tarefas:login')
+    return redirect('tarefas:index')
 
 '''-------------------------------------------------------------------------------------------------'''
 
@@ -94,3 +94,7 @@ def tarefas_editar(request:HttpRequest,id):
     formulario = tarefaForm(instance=item)
     context={'form' : formulario }
     return render(request,'editar.html', context)
+
+@login_required(login_url='tarefas:index')
+def teste(request):
+    return render(request, 'teste.html')
