@@ -36,6 +36,7 @@ button:hover{
 }
 
 .wrapper{
+    max-width: 1000px;
     margin-top: 50px;
     display: block;
     background-color: rgb(236, 236, 236);
