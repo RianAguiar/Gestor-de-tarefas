@@ -1,27 +1,18 @@
 {% load static %}
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'global.css' %}">
-    <link rel="stylesheet" href="{% static 'index/index.css' %}">
-    <link rel="icon" href="{% static " img/logo.png" %}">
-    <title>Página de Login Simples</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'tarefas/global.css' %}">
+    <link rel="icon" href="{% static "img/logo.png" %}">
+    <title>Gestor de Tarefas</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="wrapper2">
-            <h1>Login</h1>
-        </div>
-        <form>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-        <div class="cadastro">
-            <p style="font-size:15px">Ainda não tem uma conta?</p>
-            <a style="font-size:15px" href="{% url 'tarefas:cadastro'%}" class="link">cadastre-se</a>
+        <div class="wrapper2">  
+            <h1>essa pagina é o index</h1>
+            <a href="{%url 'tarefas:login'%}">clique aqui para entrar!!!</a>
         </div>
     </div>
 </body>
