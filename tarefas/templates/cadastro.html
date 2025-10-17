@@ -5,21 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="{% static 'tarefas/global.css' %}">
-    <link rel="stylesheet" href="{% static 'tarefas/login.css' %}">
+    <link rel="stylesheet" href="{% static 'tarefas/cadastro.css' %}">
     <link rel="icon" href="{% static " img/logo.png" %}">
     <title>Gestor de Tarefas</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="wrapper2">
-            <h1>Cadastro</h1>
-        </div>
-        <form>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
+
+            <h1>Crie sua Conta</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Nome de usuário" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="confirmar" placeholder="Confirmar senha" required>
             <button type="submit">Cadastrar</button>
         </form>
-        <div class="cadastro">
+
+        <div class="logar">
             <p style="font-size:15px">ja tem uma conta?</p>
             <a style="font-size:15px" href="{% url 'tarefas:login'%}" class="link">Logar</a>
         </div>

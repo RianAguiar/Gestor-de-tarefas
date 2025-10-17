@@ -12,11 +12,12 @@
 <body>
     <div class="wrapper">
         <div class="wrapper2">
-            <h1>Login</h1>
+            <h1>Logar</h1>
         </div>
-        <form>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required>
             <button type="submit">Entrar</button>
         </form>
         <div class="cadastro">
