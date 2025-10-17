@@ -9,6 +9,11 @@ from django.contrib.auth.decorators import login_required
 
 '''-------------------------------------------------------------------------------------------------'''
 
+def tarefas_index(request):
+    return render(request, 'tarefas/index.html')
+
+'''-------------------------------------------------------------------------------------------------'''
+
 def tarefas_cadastro(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -25,12 +30,12 @@ def tarefas_cadastro(request):
         user = User.objects.create_user(username=username, email=email, password=senha)
         user.save()
         messages.success(request, 'Conta criada com sucesso! Faça login.')
-        return redirect('tarefas:index')
-    return render(request, 'cadastro.html')
+        return redirect('tarefas:login')
+    return render(request, 'tarefas/cadastro.html')
 
 '''-------------------------------------------------------------------------------------------------'''
 
-def tarefas_index(request):
+def tarefas_login(request):
     if request.method == 'POST':
         email = request.POST['email']
         senha = request.POST['senha']
@@ -44,26 +49,26 @@ def tarefas_index(request):
                 messages.error(request, 'Email ou senha inválidos.')
         except User.DoesNotExist:
             messages.error(request, 'Usuário não encontrado.')
-    return render(request, 'index.html')
+    return render(request, 'tarefas/login.html')
 
 '''-------------------------------------------------------------------------------------------------'''
 
 def logout_view(request):
     logout(request)
-    return redirect('tarefas:index')
+    return redirect('tarefas:login')
 
 '''-------------------------------------------------------------------------------------------------'''
 
-@login_required(login_url='tarefas:index')
+@login_required(login_url='tarefas:login')
 def tarefas_home(request):
     context={
         'tarefas':tarefaModels.objects.all()
     }
-    return render(request,'home.html',context)
+    return render(request,'tarefas/home.html',context)
 
 '''-------------------------------------------------------------------------------------------------'''
 
-@login_required(login_url='tarefas:index')
+@login_required(login_url='tarefas:login')
 def tarefas_adicionar(request:HttpRequest):
     if request.method == 'POST':
         formulario = tarefaForm(request.POST)
@@ -71,11 +76,11 @@ def tarefas_adicionar(request:HttpRequest):
             formulario.save()
             return redirect('tarefas:home')
     context={'form' : tarefaForm } 
-    return render(request,'adicionar.html', context)
+    return render(request,'tarefas/adicionar.html', context)
 
 '''-------------------------------------------------------------------------------------------------'''
 
-@login_required(login_url='tarefas:index')
+@login_required(login_url='tarefas:login')
 def tarefas_remover(request:HttpRequest,id):
     item = get_object_or_404(tarefaModels, id=id)
     item.delete()
@@ -83,7 +88,7 @@ def tarefas_remover(request:HttpRequest,id):
 
 '''-------------------------------------------------------------------------------------------------'''
 
-@login_required(login_url='tarefas:index')
+@login_required(login_url='tarefas:login')
 def tarefas_editar(request:HttpRequest,id):
     item = get_object_or_404(tarefaModels, id=id)
     if request.method == 'POST':
@@ -93,8 +98,5 @@ def tarefas_editar(request:HttpRequest,id):
             return redirect('tarefas:home')
     formulario = tarefaForm(instance=item)
     context={'form' : formulario }
-    return render(request,'editar.html', context)
+    return render(request,'tarefas/editar.html', context)
 
-@login_required(login_url='tarefas:index')
-def teste(request):
-    return render(request, 'teste.html')
