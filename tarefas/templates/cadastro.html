@@ -12,16 +12,16 @@
 <body>
     <div class="wrapper">
         <div class="wrapper2">
-            <h1>Login</h1>
+            <h1>Cadastro</h1>
         </div>
         <form>
             <input type="email" placeholder="E-mail" required>
             <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+            <button type="submit">Cadastrar</button>
         </form>
         <div class="cadastro">
-            <p style="font-size:15px">Ainda não tem uma conta?</p>
-            <a style="font-size:15px" href="{% url 'tarefas:cadastro'%}" class="link">cadastre-se</a>
+            <p style="font-size:15px">Ja tem uma conta?</p>
+            <a style="font-size:15px" href="{% url 'tarefas:index'%}" class="link">Logar</a>
         </div>
     </div>
 </body>
