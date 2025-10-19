@@ -11,6 +11,18 @@
 </head>
 <body>
 
+    <nav>
+        <div class="logo">
+            <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
+        </div>
+        <div>
+            <a href="{% url 'tarefas:home'%}"><img style="width: 38px;" src="{% static 'img/house.png'%}" alt=""></a>
+            <a href="{% url 'tarefas:adicionar'%}"><img style="width: 26px;" src="{% static 'img/plus.png'%}" alt=""></a>
+        </div>
+            <div style="width: 50px;padding:10px;">
+        </div>
+    </nav>
+
 <div class="wrapper">
     <div class="wrapper2">
         <h1 style="color: #6da150;">
