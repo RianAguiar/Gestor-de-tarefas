@@ -21,36 +21,45 @@ This is my simple task manager built with Django, allowing users to register, lo
 ----------------------------------------
 
 ⚙️ Installation
-
 1️⃣ Clone the repository
 
-----------------------------------------
-
-git clone https://github.com/yourusername/GestorDeTarefas.git
+git clone [https://github.com/RianAguiar/Gestor-de-tarefas.git](https://github.com/RianAguiar/Gestor-de-tarefas.git)
 cd GestorDeTarefas
-
 ----------------------------------------
 
 2️⃣ Create a virtual environment
+Bash
+
 python -m venv venv
-
-source venv/bin/activate   # On macOS/Linux
-
-venv\Scripts\activate      # On Windows
+source venv/bin/activate # On macOS/Linux
+venv\Scripts\activate # On Windows
 
 ----------------------------------------
 
 3️⃣ Install dependencies
+Bash
+
 pip install -r requirements.txt
 
 ----------------------------------------
 
-4️⃣ Run migrations
+4️⃣ **VS Code Setup (Optional)**
+For a better experience, install these extensions in your VSCode:
+* **Django:** (For syntax highlighting, snippets, etc.)
+* **SQLite Viewer:** (To inspect the database)
+
+----------------------------------------
+
+5️⃣ Run migrations
+Bash
+
 python manage.py migrate
 
 ----------------------------------------
 
-5️⃣ Start the server
+6️⃣ Start the server
+Bash
+
 python manage.py runserver
 
 ----------------------------------------
