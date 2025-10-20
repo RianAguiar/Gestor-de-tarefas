@@ -45,12 +45,18 @@ pip install -r requirements.txt
 
 ----------------------------------------
 
-4️⃣ Run migrations
+4️⃣ Install on Vscode
+* **Django:**
+* **SQLite Viewer:**
+
+----------------------------------------
+
+5️⃣ Run migrations
 python manage.py migrate
 
 ----------------------------------------
 
-5️⃣ Start the server
+6️⃣ Start the server
 python manage.py runserver
 
 ----------------------------------------
