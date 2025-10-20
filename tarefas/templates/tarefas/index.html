@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'tarefas/global.css' %}">
+    <link rel="stylesheet" href="{% static 'tarefas/index.css' %}">
     <link rel="icon" href="{% static "img/logo.png" %}">
     <title>Gestor de Tarefas</title>
 </head>
@@ -12,21 +13,27 @@
 
     <nav>
         <div class="logo">
-            <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
-        </div>
-        <div>
-            <a href="{% url 'tarefas:home'%}"><img style="width: 28px;" src="{% static 'img/house.png'%}" alt=""></a>
-            <a href="{% url 'tarefas:adicionar'%}"><img style="width: 26px;" src="{% static 'img/plus.png'%}" alt=""></a>
-        </div>
-            <div style="width: 50px;padding:10px;">
+                <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
+
+            </div>
+            <div>
+            </div>
+                <a style="margin-right:10px;" class="entrar" href="{%url 'tarefas:login'%}">Entrar</a>
+                
         </div>
     </nav>
 
     <div class="wrapper">
-        <div class="wrapper2">  
-            <h1>essa pagina é o index</h1>
-            <a href="{%url 'tarefas:login'%}">clique aqui para entrar!!!</a>
+        <div>
+            <h1>FroggyFlow</h1>
+            <h2>Organize suas tarefas de forma rápida e prática.
+             Simples, eficiente e totalmente focado em você.</h2>
+             <a class="junte" href="{%url 'tarefas:cadastro'%}">Junte-se a nós</a>
         </div>
+        <div class="wrapper3">
+            <img style="width: 400px;" src="{% static 'img/logo.png'%}" alt="">
+        </div>
+
     </div>
 </body>
 </html>
