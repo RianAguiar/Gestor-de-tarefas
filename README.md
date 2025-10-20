@@ -23,7 +23,7 @@ This is my simple task manager built with Django, allowing users to register, lo
 ⚙️ Installation
 1️⃣ Clone the repository
 
-git clone [https://github.com/RianAguiar/GestorDeTarefas.git](https://github.com/RianAguiar/GestorDeTarefas.git)
+git clone [https://github.com/RianAguiar/Gestor-de-tarefas.git](https://github.com/RianAguiar/Gestor-de-tarefas.git)
 cd GestorDeTarefas
 ----------------------------------------
 
