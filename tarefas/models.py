@@ -12,3 +12,4 @@ class tarefaModels(models.Model):
 class Usuario(models.Model):
     email = models.EmailField(max_length=254, unique=True)
     senha = models.CharField(max_length=20)
+    username = models.CharField(max_length=40)
