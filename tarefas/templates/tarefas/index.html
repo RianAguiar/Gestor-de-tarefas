@@ -13,13 +13,17 @@
 
     <nav>
         <div class="logo">
-                <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
+            <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
+        </div>
 
-            </div>
-            <div>
-            </div>
-                <a style="margin-right:10px;" class="entrar" href="{%url 'tarefas:login'%}">Entrar</a>
-                
+        <div class="meio">
+            <a href="#">Produtos</a>
+            <a href="#">Blog</a>
+            <a href="#">Sobre Nós</a>
+        </div>    
+
+        <div>
+            <a style="margin-right:10px;" class="entrar" href="{%url 'tarefas:login'%}">Entrar</a>  
         </div>
     </nav>
 
