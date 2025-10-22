@@ -105,8 +105,26 @@ def tarefas_editar(request:HttpRequest,id):
     context={'form' : formulario }
     return render(request,'tarefas/editar.html', context)
 
+'''-------------------------------------------------------------------------------------------------'''
+
+
+
+
+
+
+'''FERRAMENTAS DE ADM-------------------------------------------------------------------------------'''
+
 def tarefas_adm(request):
     context={
-        'tarefas':tarefaModels.objects.all()
+        'Users':User.objects.all()
     }
     return render(request,'tarefas/adm.html',context)
+
+'''-------------------------------------------------------------------------------------------------'''
+
+def tarefas_removerUsuario(request:HttpRequest,id):
+    item = get_object_or_404(User, id=id)
+    item.delete()
+    return redirect('tarefas:adm')
+
+'''-------------------------------------------------------------------------------------------------'''
