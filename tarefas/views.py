@@ -20,6 +20,7 @@ def tarefas_cadastro(request):
         email = request.POST['email']
         senha = request.POST['senha']
         confirmar = request.POST['confirmar']
+
         if senha != confirmar:
             messages.error(request, 'As senhas não coincidem.')
             return redirect('tarefas:cadastro')
@@ -40,21 +41,24 @@ def tarefas_login(request):
     if request.method == 'POST':
         email = request.POST['email']
         senha = request.POST['senha']
+
         try:
             user = User.objects.get(email=email)
             user = authenticate(request, username=user.username, password=senha)
+
             if user is not None:
                 login(request, user)
                 return redirect('tarefas:home')
             else:
                 messages.error(request, 'Email ou senha inválidos.')
+                
         except User.DoesNotExist:
             messages.error(request, 'Usuário não encontrado.')
     return render(request, 'tarefas/login.html')
 
 '''-------------------------------------------------------------------------------------------------'''
 
-def logout_view(request):
+def tarefas_logout(request):
     logout(request)
     return redirect('tarefas:login')
 
