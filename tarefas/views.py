@@ -104,3 +104,9 @@ def tarefas_editar(request:HttpRequest,id):
     formulario = tarefaForm(instance=item)
     context={'form' : formulario }
     return render(request,'tarefas/editar.html', context)
+
+def tarefas_adm(request):
+    context={
+        'tarefas':tarefaModels.objects.all()
+    }
+    return render(request,'tarefas/adm.html',context)

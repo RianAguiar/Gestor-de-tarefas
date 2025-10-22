@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tarefas</title>
+    <link rel="stylesheet" href="{% static 'tarefas/global.css' %}">
+    <link rel="stylesheet" href="{% static 'tarefas/home.css' %}">
+    <link rel="icon" href="{% static "img/logo.png" %}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="{% url 'tarefas:index'%}"><img style="width: 50px;padding:10px;" src="{% static 'img/logo.png'%}" alt=""></a>
+        </div>
+        <div>
+            <a href="{% url 'tarefas:home'%}"><img style="width: 38px;" src="{% static 'img/house.png'%}" alt=""></a>
+            <a href="{% url 'tarefas:adicionar'%}"><img style="width: 26px;" src="{% static 'img/plus.png'%}" alt=""></a>
+        </div>
+            <div style="width: 50px;padding:10px;">
+        </div>
+    </nav>
+
+<div class="wrapper">
+    <div style="margin-top:26px;" class="wrapper2">
+        <h1 style="color: #6da150;">
+            🐸Gestor de Tarefas
+        </h1>
+    </div>
+
+    <table border="1" style="padding: 1px;">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+        </thead>
+
+        <tbody>
+            {% for tarefa in tarefas %}
+                <tr>
+                    <td>
+                        {% if tarefa.status %}
+                            <img class="icon" src="{% static "img/check.png" %}" alt="" width="20px">
+                        {% else %}
+                            <img class="icon" src="{% static "img/x.png" %}" alt="" width="20px">
+                        {% endif %}
+                    </td>
+                    <td>{{tarefa.nome}}</td>
+                    <td>{{tarefa.descricao}}</td>
+                    <td>{{tarefa.dataDeCricao}}</td>
+                    <td>
+                        <button>
+                            <a href="{% url "tarefas:editar" tarefa.id %}">Editar</a>
+                        </button>
+                        
+                        <button>
+                            <a href="{% url "tarefas:remover" tarefa.id %}">Remover</a>
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
+    <div class="button-wrapper">
+        <button class="add"><a href="{% url "tarefas:adicionar" %}">Adicionar tarefa</a></button>
+    </div>
+</div>
+</body>
+</html>
