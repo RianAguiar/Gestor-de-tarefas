@@ -9,6 +9,7 @@ This is my simple task manager built with Django, allowing users to register, lo
 - Add, edit, and delete tasks  
 - Task completion mark
 - Protected routes (login required)
+- Users Management
   
 ----------------------------------------
 
